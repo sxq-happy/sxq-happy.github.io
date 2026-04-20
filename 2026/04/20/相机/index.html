@@ -19,23 +19,23 @@
   <meta name="author" content="sxq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Openpcdet环境部署流程  本人使用硬件与环境：Wsl:Ubuntu20.04显卡：1650TICUDA 11.7 + PyTorch 1.13.1 配置步骤：1.Conda创建虚拟环境conda create -n openpcdet python&#x3D;3.8 2.激活进入虚拟环境conda activate openpcdet 3.安装cuda以下命令以 ubuntu2004 为例">
+    <meta name="description" content="泰山派相机   曾经一段时间很想拥有一个运动相机，某一天想到我好像可以自己做一个低配版哈哈。当然是选择泰山派，因为有巨人，只需要站上去就好！      第一步当然是先把buildroot系统在虚拟机中编译好，虚拟机18.04的版本比较友好，没有啥兼容性问题，这一步可以看官方教程  以下是重要的命令，懒得记，先写上，再玩这个相机的时候直接复制嘎嘎嘎。 板级配置.&#x2F;build.sh lunch 查看配">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Openpcdet跑通自建数据集">
-<meta property="og:url" content="http://example.com/2026/04/08/openpcdet/index.html">
+<meta property="og:title" content="泰山派相机">
+<meta property="og:url" content="http://example.com/2026/04/20/%E7%9B%B8%E6%9C%BA/index.html">
 <meta property="og:site_name" content="SXQ">
-<meta property="og:description" content="Openpcdet环境部署流程  本人使用硬件与环境：Wsl:Ubuntu20.04显卡：1650TICUDA 11.7 + PyTorch 1.13.1 配置步骤：1.Conda创建虚拟环境conda create -n openpcdet python&#x3D;3.8 2.激活进入虚拟环境conda activate openpcdet 3.安装cuda以下命令以 ubuntu2004 为例">
+<meta property="og:description" content="泰山派相机   曾经一段时间很想拥有一个运动相机，某一天想到我好像可以自己做一个低配版哈哈。当然是选择泰山派，因为有巨人，只需要站上去就好！      第一步当然是先把buildroot系统在虚拟机中编译好，虚拟机18.04的版本比较友好，没有啥兼容性问题，这一步可以看官方教程  以下是重要的命令，懒得记，先写上，再玩这个相机的时候直接复制嘎嘎嘎。 板级配置.&#x2F;build.sh lunch 查看配">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/bg/point.png">
-<meta property="article:published_time" content="2026-04-08T04:09:42.713Z">
-<meta property="article:modified_time" content="2026-04-08T05:04:06.182Z">
+<meta property="og:image" content="http://example.com/img/bg/camera.png">
+<meta property="article:published_time" content="2026-04-20T07:35:00.000Z">
+<meta property="article:modified_time" content="2026-04-20T09:02:56.205Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/bg/point.png">
+<meta name="twitter:image" content="http://example.com/img/bg/camera.png">
   
   
   
-  <title>Openpcdet跑通自建数据集 - SXQ</title>
+  <title>泰山派相机 - SXQ</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Openpcdet跑通自建数据集"></span>
+            <span id="subtitle" data-typed-text="泰山派相机"></span>
           
         </div>
 
@@ -242,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-04-08 12:09" pubdate>
-          Wednesday, April 8th 2026, 12:09 pm
+        <time datetime="2026-04-20 15:35" pubdate>
+          Monday, April 20th 2026, 3:35 pm
         </time>
       </span>
     
@@ -255,7 +255,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          4.5k 字
+          4k 字
         
       </span>
     
@@ -267,7 +267,7 @@
         
         
           <!-- compatible with older versions-->
-          38 分钟
+          34 分钟
         
       </span>
     
@@ -306,40 +306,230 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Openpcdet跑通自建数据集</h1>
+            <h1 id="seo-header">泰山派相机</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 style="text-align: center;">Openpcdet环境部署流程</h1>
+                <h1 align="center">泰山派相机</h1>
+  曾经一段时间很想拥有一个运动相机，某一天想到我好像可以自己做一个低配版哈哈。当然是选择泰山派，因为有巨人，只需要站上去就好！
 
-<h3 id="本人使用硬件与环境："><a href="#本人使用硬件与环境：" class="headerlink" title="本人使用硬件与环境："></a>本人使用硬件与环境：</h3><p>Wsl:Ubuntu20.04<br>显卡：1650TI<br>CUDA 11.7 + PyTorch 1.13.1</p>
-<h3 id="配置步骤："><a href="#配置步骤：" class="headerlink" title="配置步骤："></a>配置步骤：</h3><p><strong>1.Conda创建虚拟环境</strong><br>conda create -n openpcdet python&#x3D;3.8</p>
-<p><strong>2.激活进入虚拟环境</strong><br>conda activate openpcdet</p>
-<p><strong>3.安装cuda</strong><br>以下命令以 ubuntu2004 为例，请务必替换为你自己的版本！<br>wget <a target="_blank" rel="noopener" href="https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb">https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb</a><br>sudo dpkg -i cuda-keyring_1.1-1_all.deb<br>sudo apt-get update<br>sudo apt-get -y install cuda-11-7</p>
-<p><strong>4.设置 CUDA 环境变量</strong><br>echo ‘export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.7’ &gt;&gt; ~&#x2F;.bashrc<br>echo ‘export PATH&#x3D;$CUDA_HOME&#x2F;bin:$PATH’ &gt;&gt; ~&#x2F;.bashrc<br>echo ‘export LD_LIBRARY_PATH&#x3D;$CUDA_HOME&#x2F;lib64:$LD_LIBRARY_PATH’ &gt;&gt; ~&#x2F;.bashrc<br>source ~&#x2F;.bashrc</p>
-<p><strong>5.安装 cuDNN</strong><br>conda search cudnn -c conda-forge | grep cudnn<br>#以 cudnn 8.8.0 为例，请替换为你找到的合适版本<br>conda install -c conda-forge cudnn&#x3D;8.8.0 -y</p>
-<p><strong>6.安装 PyTorch</strong><br>conda install pytorch&#x3D;&#x3D;1.13.1 torchvision&#x3D;&#x3D;0.14.1 torchaudio&#x3D;&#x3D;0.13.1 pytorch-cuda&#x3D;11.7 -c pytorch -c nvidia -y<br>#验证 PyTorch 和 CUDA<br>python -c “import torch; print(torch.<strong>version</strong>); print(torch.cuda.is_available())”<br>应输出 1.13.1 和 True</p>
-<p><strong>7.安装 spconv</strong><br>pip install spconv-cu117  # CUDA 11.7 对应 spconv-cu117</p>
-<p><strong>8.克隆并安装 OpenPCDet</strong><br>git clone <a target="_blank" rel="noopener" href="https://github.com/open-mmlab/OpenPCDet.git">https://github.com/open-mmlab/OpenPCDet.git</a><br>cd OpenPCDet<br>打开requirements.txt 4，10，11需要注释掉避免冲突，再执行pip install -r requirements.txt<br><img src="/2026/04/08/openpcdet/i18pmg3-$%7Bcurr3nt8pmt3Ti183%7D.png" srcset="/img/loading.gif" lazyload alt="1"></p>
-<p><strong>9.检查 gcc 版本</strong><br>gcc –version<br>如果版本高于10，可以临时设置使用 gcc-9 进行编译（需要先安装 sudo apt install gcc-9 g++-9 -y）。</p>
-<p><strong>10.编译安装OpenPCDet</strong><br>python setup.py develop</p>
-<p><strong>11.安装open3d</strong><br>pip install open3d</p>
-<p><strong>12.下载iris数据集</strong><br><a target="_blank" rel="noopener" href="https://centreborelli.github.io/iris-vis/">https://centreborelli.github.io/iris-vis/</a><br>数据集点云密度太大用labelCloud标注软件打不开（Windows版labelCloud比较容易安装），需要下采样（降低点云密度）Cloudcompare或者python脚本都可以，然后开始标注</p>
-<p><strong>13.创建自定义数据集文件</strong><br>cd ~&#x2F;OpenPCDet<br>mkdir -p data&#x2F;custom&#x2F;{points,labels,ImageSets}<br>点云文件放到：points中<br>标注文件放到：labels中</p>
-<p><strong>14.创建数据集划分文件</strong><br>cd ~&#x2F;OpenPCDet&#x2F;data&#x2F;custom<br>echo “zoneA_clean_for_label” &gt; ImageSets&#x2F;train.txt # zoneA_clean_for_label换成自己的文件<br>echo “zoneB_clean_for_label” &gt; ImageSets&#x2F;val.txt # zoneB_clean_for_label换成自己的<br><img src="/2026/04/08/openpcdet/i19pmg3-$%7Bcurr3nt8pmt3Ti193%7D.png" srcset="/img/loading.gif" lazyload alt="2"></p>
-<p><strong>15.创建数据集配置文件</strong><br>tools&#x2F;cfgs&#x2F;dataset_configs&#x2F;custom_dataset.yaml 需要改成自己标注的设备，点云范围</p>
-<p><strong>16.编辑模型配置文件</strong><br>打开cfgs&#x2F;custom_models&#x2F;pointpillar_custom.yaml<br>配置文件中的点云范围要把所有数据的范围都包括，用ai生成python脚本计算每个点云文件的实际范围，custom_dataset.yaml也是一样<br><img src="/2026/04/08/openpcdet/i22pmg3-$%7Bcurr3nt8pmt3Ti223%7D.png" srcset="/img/loading.gif" lazyload alt="3"><br>体素大小也许要改，不然报错，让ai告诉你应该填啥，自己算也行，PointPillar要求Z方向只有1个体素。你需要确保VOXEL_SIZE（Z方向体素大小）大于等于Z轴范围的高度。<br><img src="/2026/04/08/openpcdet/i20pmg3-$%7Bcurr3nt8pmt3Ti203%7D.png" srcset="/img/loading.gif" lazyload alt="4"><br><img src="/2026/04/08/openpcdet/i21pmg3-$%7Bcurr3nt8pmt3Ti213%7D.png" srcset="/img/loading.gif" lazyload alt="5"></p>
-<p><strong>17.将所有.ply转换为带色彩信息的.npy文件</strong></p>
-<p><strong>18.生成数据信息</strong><br>每次改custom_dataset.yaml这个都需删除之前的数据信息，重新生成<br>cd ~&#x2F;OpenPCDet<br>rm -f data&#x2F;custom&#x2F;*.pkl<br>rm -rf ~&#x2F;OpenPCDet&#x2F;output&#x2F;custom_models&#x2F;pointpillar_custom&#x2F;<br>python -m pcdet.datasets.custom.custom_dataset create_custom_infos tools&#x2F;cfgs&#x2F;dataset_configs&#x2F;custom_dataset.yaml</p>
-<p><strong>19.开始训练</strong><br>cd ~&#x2F;OpenPCDet&#x2F;tools<br>python train.py –cfg_file cfgs&#x2F;custom_models&#x2F;pointpillar_custom.yaml</p>
-<p><strong>20.运行验证程序</strong><br>cd ~&#x2F;OpenPCDet&#x2F;tools<br>python demo.py –cfg_file cfgs&#x2F;custom_models&#x2F;pointpillar_custom.yaml <br>    –ckpt &#x2F;home&#x2F;sxq&#x2F;OpenPCDet&#x2F;output&#x2F;custom_models&#x2F;pointpillar_custom&#x2F;default&#x2F;ckpt&#x2F;checkpoint_epoch_50.pth <br>    –data_path &#x2F;home&#x2F;sxq&#x2F;OpenPCDet&#x2F;data&#x2F;custom&#x2F;points&#x2F;zoneA_clean_for_label.npy <br>–ext .npy</p>
-<p>cd &#x2F;home&#x2F;OpenPCDet&#x2F;tools</p>
-<p>python demo.py <br>  –cfg_file cfgs&#x2F;custom_models&#x2F;pointpillar_custom.yaml <br>  –ckpt &#x2F;home&#x2F;OpenPCDet&#x2F;output&#x2F;custom_models&#x2F;pointpillar_custom&#x2F;default&#x2F;ckpt&#x2F;checkpoint_epoch_100.pth <br>  –data_path &#x2F;home&#x2F;OpenPCDet&#x2F;data&#x2F;custom&#x2F;points&#x2F; <br>  –ext .npy <br>  –output_dir &#x2F;home&#x2F;OpenPCDet&#x2F;output&#x2F;demo_results</p>
-<p>评估模型<br>cd &#x2F;home&#x2F;OpenPCDet&#x2F;tools</p>
-<p>python test.py <br>  –cfg_file cfgs&#x2F;custom_models&#x2F;pointpillar_custom.yaml <br>  –ckpt output&#x2F;custom_models&#x2F;pointpillar_custom&#x2F;default&#x2F;ckpt&#x2F;checkpoint_epoch_100.pth <br>  –eval_all<br>报错的话:<br>KeyError: ‘Redpillar’<br>vi &#x2F;home&#x2F;OpenPCDet&#x2F;pcdet&#x2F;datasets&#x2F;kitti&#x2F;kitti_object_eval_python&#x2F;eval.py<br><img src="/2026/04/08/openpcdet/i23pmg3-$%7Bcurr3nt8pmt3Ti233%7D.png" srcset="/img/loading.gif" lazyload alt="6"></p>
-<h3 id="服务器租赁版"><a href="#服务器租赁版" class="headerlink" title="服务器租赁版"></a>服务器租赁版</h3><p>清除cuda路径<br>unset CUDA_HOME<br>unset CUDA_PATH<br><strong>正确设置</strong><br>export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8<br>export PATH&#x3D;$CUDA_HOME&#x2F;bin:$PATH<br>export LD_LIBRARY_PATH&#x3D;$CUDA_HOME&#x2F;lib64:$LD_LIBRARY_PATH<br>#检查 nvvm 路径<br>ls -la &#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;nvvm&#x2F;lib64&#x2F;<br><strong>永久保存</strong><br>echo ‘export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8’ &gt;&gt; ~&#x2F;.bashrc<br>echo ‘export PATH&#x3D;$CUDA_HOME&#x2F;bin:$PATH’ &gt;&gt; ~&#x2F;.bashrc<br>echo ‘export LD_LIBRARY_PATH&#x3D;$CUDA_HOME&#x2F;lib64:$LD_LIBRARY_PATH’ &gt;&gt; ~&#x2F;.bashrc<br>source ~&#x2F;.bashrc<br><strong>如果遇到cuda.h找不到的问题</strong><br>export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8<br>export PATH&#x3D;$CUDA_HOME&#x2F;bin:$PATH<br>export LD_LIBRARY_PATH&#x3D;$CUDA_HOME&#x2F;lib64:$LD_LIBRARY_PATH</p>
+<p><img src="/2026/04/20/%E7%9B%B8%E6%9C%BA/i2pmg1-$%7Bcurr1nt20pmt1Ti21%7D.png" srcset="/img/loading.gif" lazyload alt="启动界面"></p>
+<p><img src="/2026/04/20/%E7%9B%B8%E6%9C%BA/i34pmg1-$%7Bcurr1nt20pmt1Ti341%7D.png" srcset="/img/loading.gif" lazyload alt="泰山派主板"></p>
+<p>  第一步当然是先把buildroot系统在虚拟机中编译好，虚拟机18.04的版本比较友好，没有啥兼容性问题，这一步可以看<a target="_blank" rel="noopener" href="https://wiki.lckfb.com/zh-hans/tspi-rk3566/sdk-compilation/linux-compilation.html#%E4%B8%8B%E8%BD%BDsdk">官方教程</a><br>  以下是重要的命令，懒得记，先写上，再玩这个相机的时候直接复制嘎嘎嘎。</p>
+<h3 id="板级配置"><a href="#板级配置" class="headerlink" title="板级配置"></a>板级配置</h3><pre><code class="hljs">./build.sh lunch
+查看配置是否生效
+./build.sh -h kernel
+</code></pre>
+<h3 id="全编译"><a href="#全编译" class="headerlink" title="全编译"></a>全编译</h3><pre><code class="hljs">选择buildrot操作系统
+export RK_ROOTFS_SYSTEM=buildroot
+运行自动全编译命令
+./build.sh all  
+</code></pre>
+<h3 id="固件打包"><a href="#固件打包" class="headerlink" title="固件打包"></a>固件打包</h3><pre><code class="hljs">./mkfirmware.sh    
+打包成功后，固件会输出到 `rockdev` 目录 #root@lckfb:/home/lckfb_tspi/linux/tspi_linux_sdk_20230916/rockdev
+</code></pre>
+<h3 id="单独编译"><a href="#单独编译" class="headerlink" title="单独编译"></a>单独编译</h3><pre><code class="hljs">./build.sh uboot #U-Boot编译命令
+./build.sh kernel #Kernel编译命令
+./build.sh recovery #Recovery编译命令
+./build.sh rootfs #Rootfs编译命令
+</code></pre>
+<h3 id="下载update-img"><a href="#下载update-img" class="headerlink" title="下载update.img"></a>下载update.img</h3><pre><code class="hljs">./build.sh updateimg
+</code></pre>
+<h3 id="python版本的切换-官方教程"><a href="#python版本的切换-官方教程" class="headerlink" title="python版本的切换 官方教程"></a>python版本的切换 <a target="_blank" rel="noopener" href="https://wiki.lckfb.com/zh-hans/tspi-rk3566/project-case/fat-little-cell-phone/sdk-compile.html">官方教程</a></h3><pre><code class="hljs">sudo update-alternatives --config python #版本切换
+</code></pre>
+<p><img src="/2026/04/20/%E7%9B%B8%E6%9C%BA/i0pmg1-$%7Bcurr1nt20pmt1Ti01%7D.png" srcset="/img/loading.gif" lazyload alt="烧录镜像"></p>
+<h3 id="配置界面"><a href="#配置界面" class="headerlink" title="配置界面"></a>配置界面</h3><pre><code class="hljs">应用程序、库和工具的配置界面
+加载环境变量:
+source buildroot/build/envsetup.sh
+进入Buildroot配置界面:
+make menuconfig
+保存的配置生效：
+make savedefconfig
+---------------------------------
+硬件驱动的配置界面
+kenrnel目录下运行
+make ARCH=arm64 menuconfig
+保存的配置生效：
+make ARCH=arm64 savedefconfig
+</code></pre>
+<h3 id="编译QT5命令官方教程1官方教程2"><a href="#编译QT5命令官方教程1官方教程2" class="headerlink" title="编译QT5命令官方教程1官方教程2"></a>编译QT5命令<a target="_blank" rel="noopener" href="https://wiki.lckfb.com/zh-hans/tspi-rk3566/documentation/transplant-qt5.html">官方教程1</a><a target="_blank" rel="noopener" href="https://wiki.lckfb.com/zh-hans/tspi-rk3566/documentation/gj-rk3566-buildroot-add-qt.html">官方教程2</a></h3><pre><code class="hljs">编译步骤：
+进入到QT项目文件qmake成makfile文件:
+/home/action/rk3568/buildroot/output/rockchip_rk3566/host/bin/qmake
+生成可执行程序：
+sudo make
+文件加权限：
+sudo chmod 777 ClockTop
+</code></pre>
+<h3 id="杂七杂八的命令"><a href="#杂七杂八的命令" class="headerlink" title="杂七杂八的命令"></a>杂七杂八的命令</h3><pre><code class="hljs">赋予脚本执行权限
+chmod +x /data/record.sh
+------------------------
+查看触摸设备
+ls /dev/input/event*
+测试触摸屏
+evtest /dev/input/eventX # 用新出现的编号替换 X
+------------------------
+挂载sd卡
+确认 SD 卡是否被识别
+cat /proc/partitions
+创建挂载点
+mkdir -p /mnt/sdcard
+手动挂载SD卡
+mount /dev/mmcblk1p1 /mnt/sdcard
+-----------------------
+运行QT程序
+cd /root
+chmod +x /root/camera/camera
+./first --platform linuxfb
+/root/camera/camera --platform wayland
+</code></pre>
+<h3 id="开机修改weston"><a href="#开机修改weston" class="headerlink" title="开机修改weston"></a>开机修改weston</h3><pre><code class="hljs">[core]
+backend=drm-backend.so
 
+# Allow running without input devices
+require-input=false
+
+# Disable screen idle timeout by default
+idle-time=0
+
+# The repaint-window is used to calculate repaint delay(ms) after flipped.
+#   value &lt;= 0: delay = abs(value)
+#   value &gt; 0: delay = vblank_duration - value
+repaint-window=-1
+
+# Allow blending with lower drm planes
+# gbm-format=argb8888
+
+[shell]
+# top(default)|bottom|left|right|none, none to disable panel
+panel-position=none
+background-color=0xff0022
+# Scale panel size
+panel-scale=3
+
+# none|minutes(default)|minutes-24h|seconds|seconds-24h
+# clock-format=minutes-24h
+clock-with-date=false
+
+# Disable screen locking
+locking=false
+
+[libinput]
+# Uncomment below to enable touch screen calibrator(weston-touch-calibrator)
+# touchscreen_calibrator=true
+# calibration_helper=/bin/weston-calibration-helper.sh
+
+[keyboard]
+# Comment this to enable vt switching
+vt-switching=false
+
+# Configs for auto key repeat
+# repeat-rate=40
+# repeat-delay=400
+
+[output]
+name=DSI-1
+mode=378x562
+transform=normal
+</code></pre>
+<h3 id="WIFI启动脚本"><a href="#WIFI启动脚本" class="headerlink" title="WIFI启动脚本"></a>WIFI启动脚本</h3><pre><code class="hljs">cat &gt; /etc/init.d/S38wifi &lt;&lt; &#39;EOF&#39;
+#!/bin/sh
+
+LOG_FILE=&quot;/var/log/wifi.log&quot;
+INTERFACE=&quot;wlan0&quot;
+WIFI_SSID=&quot;Xiaomi14&quot;
+WIFI_PASSWORD=&quot;12345678&quot;
+
+log_msg() {
+    echo &quot;$(date &#39;+%Y-%m-%d %H:%M:%S&#39;): $1&quot; &gt;&gt; $LOG_FILE
+}
+
+log_msg &quot;=== WiFi 连接开始 ===&quot;
+
+# 检查网卡是否存在
+if [ ! -d &quot;/sys/class/net/$INTERFACE&quot; ]; then
+    log_msg &quot;ERROR: $INTERFACE not found&quot;
+    exit 1
+fi
+
+# 生成配置文件
+cat &gt; /etc/wpa_supplicant.conf &lt;&lt; CONFIG
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+country=CN
+network={
+    ssid=&quot;$WIFI_SSID&quot;
+    psk=&quot;$WIFI_PASSWORD&quot;
+    key_mgmt=WPA-PSK
+}
+CONFIG
+
+# 启动网卡
+ifconfig $INTERFACE up
+log_msg &quot;网卡已启动&quot;
+
+# 启动 wpa_supplicant
+killall wpa_supplicant 2&gt;/dev/null  # 杀死已有实例
+wpa_supplicant -B -i $INTERFACE -c /etc/wpa_supplicant.conf
+
+if [ $? -ne 0 ]; then
+    log_msg &quot;ERROR: wpa_supplicant 启动失败&quot;
+    exit 1
+fi
+log_msg &quot;wpa_supplicant 已启动&quot;
+
+# 等待连接建立（最多10秒）
+log_msg &quot;等待连接...&quot;
+for i in 1 2 3 4 5 6 7 8 9 10; do
+    sleep 1
+    # 检查连接状态
+    if wpa_cli -i $INTERFACE status | grep -q &quot;wpa_state=COMPLETED&quot;; then
+        log_msg &quot;WiFi 认证成功&quot;
+        break
+    fi
+done
+
+# 获取IP地址
+udhcpc -i $INTERFACE -q -t 5
+
+# 获取IP（修正后的方法）
+IP=$(ip addr show $INTERFACE | grep &quot;inet &quot; | awk &#39;{print $2}&#39; | cut -d/ -f1)
+
+if [ -n &quot;$IP&quot; ]; then
+    log_msg &quot;WiFi 连接成功: $IP&quot;
+else
+    log_msg &quot;ERROR: 获取IP失败&quot;
+    # 查看连接状态
+    wpa_cli -i $INTERFACE status &gt;&gt; $LOG_FILE
+fi
+
+log_msg &quot;=== WiFi 连接结束 ===&quot;
+exit 0
+EOF
+---------------------------------------
+测试命令
+chmod +x /etc/init.d/S38wifi
+/etc/init.d/S38wifi
+</code></pre>
+<h3 id="开机自启动脚本"><a href="#开机自启动脚本" class="headerlink" title="开机自启动脚本"></a>开机自启动脚本</h3><pre><code class="hljs">cat &gt; /etc/init.d/S99camera &lt;&lt; &#39;EOF&#39;
+#!/bin/sh
+# 等待 Weston 完全启动
+while [ ! -e /run/wayland-0 ]; do
+    sleep 0.5
+done
+
+# 设置 Wayland 需要的所有环境变量
+export XDG_RUNTIME_DIR=/run
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# 启动相机
+/root/camera/camera --platform wayland &amp;
+
+exit 0
+EOF
+</code></pre>
+<h3 id="巨人教程-OV8858驱动2-3寸mipi屏幕"><a href="#巨人教程-OV8858驱动2-3寸mipi屏幕" class="headerlink" title="巨人教程 OV8858驱动2.3寸mipi屏幕"></a>巨人教程 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53686293/article/details/153208692?spm=1001.2014.3001.5501">OV8858驱动</a><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53686293/article/details/156202739?spm=1001.2014.3001.5502">2.3寸mipi屏幕</a></h3>
                 
               </div>
             
@@ -357,7 +547,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%82%B9%E4%BA%91%E7%9B%B8%E5%85%B3/" class="category-chain-item">点云相关</a>
+  <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux/" class="category-chain-item">嵌入式Linux</a>
   
   
 
@@ -377,8 +567,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Openpcdet跑通自建数据集</div>
-      <div>http://example.com/2026/04/08/openpcdet/</div>
+      <div>泰山派相机</div>
+      <div>http://example.com/2026/04/20/相机/</div>
     </div>
     <div class="license-meta">
       
@@ -390,7 +580,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>April 8, 2026</div>
+          <div>April 20, 2026</div>
         </div>
       
       
@@ -422,18 +612,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/04/14/%E9%9F%B3%E9%A2%91/" title="音频">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">音频</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/04/08/4%E6%9C%88%E6%9D%82%E8%AE%B0/" title="杂记|4月">
-                        <span class="hidden-mobile">杂记|4月</span>
+                      <a href="/2026/04/14/%E9%9F%B3%E9%A2%91/" title="音频">
+                        <span class="hidden-mobile">音频</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
