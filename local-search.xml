@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>FreeRtos</title>
+    <link href="/2026/04/22/freertos/"/>
+    <url>/2026/04/22/freertos/</url>
+    
+    <content type="html"><![CDATA[<h1 align="center">我要把隔壁的裸机移植成FreeRTOS</h1>  最近的隔壁的任务比较轻松，尝试将裸机移植到FreeRTOS系统，先复习一些基础，就交给AI吧。<h3 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 (Stack)"></a>栈 (Stack)</h3><pre><code class="hljs">用途：存储局部变量、函数调用信息、函数参数等。特点：每个任务有自己的独立栈，私有的，不共享。由编译器自动分配和释放。大小：你在 CubeMX 中给每个任务配置的 Stack Size（如 128 words，256 words）就是栈的大小。快：分配和释放几乎不消耗时间。自动：你不需要手动管理，函数进出时自动完成。有限：大小固定，如果局部变量太多或函数嵌套太深，就会栈溢出（这是嵌入式开发中很常见的问题）。</code></pre><h3 id="堆-Heap"><a href="#堆-Heap" class="headerlink" title="堆 (Heap)"></a>堆 (Heap)</h3><pre><code class="hljs">用途：用于动态内存分配，比如用 pvPortMalloc() 创建任务、队列、信号量等内核对象。特点：整个系统共用一个堆。需要你手动分配和释放。大小：你在 CubeMX 中配置的 TOTAL_HEAP_SIZE（如 15KB）就是堆的大小。如果用 FreeRTOS 的队列 (Queue) 来传数据，队列的内存就来自堆。</code></pre><h3 id="栈和堆的关系"><a href="#栈和堆的关系" class="headerlink" title="栈和堆的关系"></a>栈和堆的关系</h3><pre><code class="hljs">任务的栈空间（一块内存）是从堆里分配的，但这块内存被用来当作栈，按栈的方式管理。不能说“栈在堆里”，而应该说：“栈使用的内存来自堆”</code></pre><p><img src="/2026/04/22/freertos/i36pmg3-$%7Bcurr3nt22pmt3Ti363%7D.png" alt="堆和栈"></p><h3 id="我怎么知道一个任务用了多少栈？"><a href="#我怎么知道一个任务用了多少栈？" class="headerlink" title="我怎么知道一个任务用了多少栈？"></a>我怎么知道一个任务用了多少栈？</h3><pre><code class="hljs">FreeRTOS 的 uxTaskGetStackHighWaterMark()</code></pre><p><img src="/2026/04/22/freertos/i54pmg3-$%7Bcurr3nt22pmt3Ti543%7D.png" alt="肯定是我分配的不对，这才用了几个引脚"></p><p>——————————————–堆和栈——————————————-</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>嵌入式Linux</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>泰山派相机</title>
     <link href="/2026/04/20/%E7%9B%B8%E6%9C%BA/"/>
     <url>/2026/04/20/%E7%9B%B8%E6%9C%BA/</url>
